@@ -23,9 +23,8 @@ class ApplicationController < Sinatra::Base
     #binding.pry 
     if user.save
       redirect '/login' 
-    elsif user && user.authenticate(params[:password])
-      session[user_id] = user.id 
-      redirect '/login'
+    else 
+      redirect '/failure'
     end 
   end
 
