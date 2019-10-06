@@ -14,11 +14,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/signup" do
+    user = User.
     erb :signup
   end
 
   post "/signup" do
-    user = User.find_by(:username => params[:username])
+    user = User.new(:username => params[:username], :password => params[:password])
     binding.pry 
     if !user 
       redirect '/failure' 
