@@ -22,7 +22,6 @@ class ApplicationController < Sinatra::Base
     if !user 
       erb :failure 
     end 
-    #binding.pry 
 
   end
 
