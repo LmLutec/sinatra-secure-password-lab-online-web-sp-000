@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   post "/signup" do
     user = params[:username]
     if !user 
-      redirect 'failure' 
+      redirect '/failure' 
     end 
 
   end
