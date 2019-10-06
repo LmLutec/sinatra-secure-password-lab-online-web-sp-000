@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    params 
+    user = params[:username] 
     #binding.pry 
 
   end
