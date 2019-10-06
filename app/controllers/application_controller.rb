@@ -1,3 +1,4 @@
+require 'pry'
 require "./config/environment"
 require "./app/models/user"
 class ApplicationController < Sinatra::Base
@@ -17,7 +18,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    #your code here
+    params 
+    #binding.pry 
 
   end
 
