@@ -18,7 +18,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    user = params[:username] 
+    user = params[:username]
+    if !user 
+      erb :failure 
+    end 
     #binding.pry 
 
   end
